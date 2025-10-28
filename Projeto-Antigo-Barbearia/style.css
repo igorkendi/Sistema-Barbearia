@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Tema principal */
+.stApp {
+    background-color: #1C1C1C;
+    color: #F8F8FF;
+}
+
+.main > .block-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+/* TÍTULOS */
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: #F8F8FF;
+    text-align: center;
+    border-bottom: 2px solid #F8F8FF;
+    padding-bottom: 10px;
+}
+
+/* Sub-cabeçalhos (h2, h3, stHeader, stSubheader) */
+h2,
+h3,
+.stHeader,
+.stSubheader {
+    font-family: 'Playfair Display', serif;
+    color: #F8F8FF;
+}
+
+/* Divisor */
+.stDivider {
+    background-color: #F6C954;
+}
+
+/* INPUTS */
+.stTextInput > div > div > input,
+.stTimeInput > div > div > input,
+.stNumberInput > div > div > input {
+    background-color: #FFFFFF;
+    color: #111111;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+
+
+.stTextInput > div > div > input:focus,
+.stTimeInput > div > div > input:focus,
+.stNumberInput > div > div > input:focus {
+    border-color: #171717;
+    box-shadow: 0 0 5px #171717;
+}
+
+
+
+/* --- EXPANDER  --- */
+.stExpander > summary {
+    background-color: #1A1A2A;
+    color: #FAFAFA;
+    border: 1px solid #333344;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.stExpander > summary:hover {
+    background-color: #2A2A3A;
+}
+
+.stExpander > summary svg {
+    fill: #FAFAFA; 
+}
+
+/* Fundo de dentro do expander */
+div[data-testid="stExpander"] > div:nth-of-type(2) {
+    background-color: #1C1C1C; 
+}
+
+/* --- DATAFRAME --- */
+.stDataFrame {
+    border: 2px solid #2A2A4A;
+    border-radius: 5px;
+}
+
+.stDataFrame > div > div > div > div > div .column-header {
+    background-color: #2A2A4A;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.stDataFrame .data-grid-cell {
+    background-color: #1C1C1C;
+    color: #FAFAFA;
+    border-bottom: 1px solid #2A2A4A;
+}
+
+/* --- BOTÕES --- */
+
+/* Estilo base */
+.stButton > button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stButton > button:hover {
+    opacity: 0.8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão "Adicionar horário" */
+div[data-testid="stTextInput"][aria-label="Horário marcado (ex: 14:30):"] + div[data-testid="stButton"] > button {
+    background-color: #00bbff;
+    color: white;
+}
+
+/* Botão "Atualizar Lista" */
+div[data-testid="stExpander"] div[data-testid="stDataFrame"] + div[data-testid="stButton"] > button {
+    background-color: #5BC0DE;
+    color: white;
+}
+
+div[data-testid="st.Expander"] div[data-testid="stNumberInput"][aria-label="Digite o ID para apagar um horário"] + div[data-testid="stButton"] > button {
+    background-color: #ffffff;
+    color: white;
+}
